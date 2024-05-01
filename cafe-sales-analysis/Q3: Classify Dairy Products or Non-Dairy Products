@@ -1,0 +1,15 @@
+--3. Classify Dairy Products or Non-Dairy Products
+
+select
+    item_id,
+    item_name,
+    case
+      when item_id = 3 or
+           item_id = 4 or 
+           item_id = 5 or
+           item_id = 8 or 
+           item_id = 9  
+      then 'Dairy Products'
+      else 'Non-Dairy Product'
+    END AS product_type  
+from Items;
