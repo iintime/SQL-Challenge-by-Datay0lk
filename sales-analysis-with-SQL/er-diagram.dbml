@@ -1,0 +1,66 @@
+// Create Table 
+// DDL 
+Table Customers {
+  customer_id INT [pk]
+  customer_name VARCHAR(50)
+  city VARCHAR(50)
+  order_count INTEGER
+}
+
+
+
+Table Orders {
+  order_id INT [pk]
+  order_date DATE
+  customer_id INT
+}
+
+Table Payments {
+  payment_id INT [pk]
+  payment_method VARCHAR(50)
+  amount INTEGER
+  order_id INT
+}
+
+Table Order_Details {
+  order_id INT
+  product_id INT
+  quantity INTEGER
+}
+
+Table Products {
+  product_id INT [pk]
+  product_name VARCHAR(50)
+  unit_price FLOAT
+}
+
+Table Expired_Products {
+  product_id INT [pk]
+  product_name VARCHAR(50)
+  expiration_date DATE
+}
+
+// Make relationship
+Ref a_relationship {
+  Customers.customer_id < Orders.customer_id
+}
+
+Ref b_relationship {
+  Orders.order_id > Payments.order_id
+}
+
+Ref c_relationship {
+  Orders.order_id > Order_Details.order_id
+}
+
+Ref d_relationship {
+  Products.product_id - Expired_Products.product_id
+}
+
+Ref e_relationship {
+  Products.product_name - Expired_Products.product_name
+}
+
+Ref f_relationship {
+  Order_Details.product_id > Products.product_id
+}
