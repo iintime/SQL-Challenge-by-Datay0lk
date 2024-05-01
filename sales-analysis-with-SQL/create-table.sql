@@ -185,30 +185,16 @@ VALUES
   (9, 'Pork - Sausage, Medium', '2023-06-08 09:06:04'),
   (10, 'Chicken Giblets', '2022-01-16 06:19:44');
 
-.print #######################
-.print #### SQL Challenge ####
-.print #######################
 
-.print \n Customers table
-.mode box
+-- Preview
 select * from customers limit 5;
 
-.print \n Orders table
-.mode box
 select * from Orders limit 5;
 
-.print \n Payments table
-.mode box
 select * from Payments limit 5;
 
-.print \n Order_Details table
-.mode box
 select * from Order_Details limit 5;
 
-.print \n Products table
-.mode box
 select * from Products limit 5;
 
-.print \n Expired_Products table
-.mode box
 select * from Expired_Products limit 5;
