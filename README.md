@@ -1,1 +1,1 @@
-# SQL-Challenge-by-Datay0lk-
+# SQL-Challenge-by-Datay0lk
